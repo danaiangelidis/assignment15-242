@@ -1,0 +1,173 @@
+/* Structure */
+
+body {
+    background-color: #edf4f8;
+    margin: 0px;
+}
+
+.hide {
+    display: none;
+}
+
+#main-header {
+    text-align: center;
+    background-color: white;
+    padding: 1px;
+    box-shadow: #a2b3bd 0px 0px 5px;
+}
+
+#main-content {
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    padding: 20px 0px;
+}
+
+.animal {
+    padding: 10px;
+    margin: 0px auto;
+    width: 90%;
+    border: 2px solid #d3dadf59;
+}
+
+.animal h2 {
+    text-align: center;
+}
+
+.animal img {
+    display: block;
+    margin: 0px auto;
+    width: 90%;
+}
+
+/*Typography*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation */
+
+.underline {
+    border-bottom: solid 5px #0a1a25;
+}
+
+#main-nav {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    width: 85%;
+    margin: 0px auto;
+}
+
+#main-nav ul {
+    padding-left: 0px;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+#main-nav li {
+    list-style-type: none;
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #3e6b85;
+    width: 100%;
+    font-size: 120%;
+}
+
+#main-nav li:hover {
+    border-bottom: solid 5px #142b398e;
+}
+
+/* Form */
+
+form {
+    text-align: center;
+}
+
+label,
+input,
+textarea,
+select {
+    display: inline-block;
+}
+
+label {
+    width: 200px;
+    text-align: left;
+    padding: 5px;
+}
+
+input[type=text],
+input[type=number],
+textarea,
+select {
+    background-color: #3e6b8570;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=number],
+textarea {
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 200px;
+    min-height: 30px;
+}
+
+select {
+    width: 275px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.482);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+input::file-selector-button {
+    background-color: #3e6b8570;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+}
+
+input[type=file] {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+button {
+    background-color: #3e6b85;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+}
+
+button:hover {
+    background-color: #204458;
+}
+
+/* Media Query */
+
+@media only screen and (min-width: 800px) {
+
+    .flex-container {
+        display: flex;
+    }
+
+    .animal {
+        padding: 10px;
+        width: 30%;
+    }
+}

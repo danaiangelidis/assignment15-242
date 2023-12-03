@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Assignment 14</title>
+        <title>Assignment 15</title>
         <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     </head>
@@ -28,38 +28,13 @@
                     <h3>Add a new friend to our system:</h3>
                     <input type="hidden" name="_id" value="-1">
                     <p>
-                        <label for="animal">Animal:</label>
-                        <select id="animal" name="animal">
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                        </select>
-                    </p>
-                    <p>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Jim Doe" autocomplete="Jim Doe">
                     </p>
-                    <p>
-                        <label for="description">Description:</label>
-                        <textarea type="text" id="description" name="description" placeholder="Please write a detailed description about the animal!"></textarea>
-                    </p>
-                    <p>
-                        <label for="breed">Breed:</label>
-                        <input type="text" id="breed" name="breed" placeholder="Mix">
-                    </p>
-                    <p>
-                        <label for="age">Age:</label>
-                        <select id="age" name="age">
-                            <option value="0-2 Months">0-2 Months</option>
-                            <option value="2-7 Months">2-8 Months</option>
-                            <option value="8-24 Months">8-24 Months</option>
-                            <option value="25-144 Months">25-144 Months</option>
-                            <option value="145-224 Months">145-224 Months</option>
-                            <option value=">225 Months">>225 Months</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="weight">Weight:</label>
-                        <input type="number" id="weight" name="weight" placeholder="LBS">
+                    <p id="traits">
+                        <label>Personality Traits:</label>
+                        <a href="#" id="add-trait">Add Trait</a>
+                        <section id="trait-boxes"></section>
                     </p>
                     <p>
                         <button type="submit">Submit</button>

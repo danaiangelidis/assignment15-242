@@ -41,29 +41,21 @@ const showAnimals = async() => {
         h2.innerHTML = animal.name;
         article.append(h2);
 
-        const description = document.createElement("p");
-        description.innerHTML = animal.description;
-        article.append(description);
+        // console.log(animal.traits);
 
-        const breed = document.createElement("p");
-        breed.innerHTML = `Breed: ${animal.breed}`;
-        article.append(breed);
-
-        const age = document.createElement("p");
-        age.innerHTML = `Age: ${animal.age}`;
-        article.append(age);
-
-        const weight = document.createElement("p");
-        weight.innerHTML = `Weight: ${animal.weight}lbs`;
-        article.append(weight);
-
-        if (animal.animal == "dog") {
-            dogsDiv.append(article);
-        } else if (animal.animal == "cat") {
-            catsDiv.append(article);
-        }
+        dogsDiv.append(article);
     });
 };
+
+/*
+const addTrait = (e) => {
+    e.preventDefault();
+    const section = document.getElementById("trait-boxes");
+    const input = document.createElement("input");
+    input.type = "text";
+    section.append(input);
+}
+*/
 
 const getLi = (data) => {
     const li = document.createElement("li");
@@ -85,7 +77,11 @@ const addAnimal = async(e) => {
     const form = document.getElementById("add-animal");
     const formData = new FormData(form);
     let response;
+    // formData.append("traits", getTraits());
+
     if (form._id.value == -1) {
+        formData.delete("_id");
+
         console.log(...formData);
 
         response = await fetch("/api/animals", {
@@ -99,6 +95,11 @@ const addAnimal = async(e) => {
     }
 
     response = await response.json();
+
+    if (form._id.value != -1) {
+        showAnimals();
+    }
+
     resetForm();
     showAnimals();
 };
@@ -110,9 +111,10 @@ const resetForm = () => {
 };
 
 window.onload = () => {
+    showAnimals();
     document.getElementById("dog-tab").onclick = showDogs;
     document.getElementById("cat-tab").onclick = showCats;
     document.getElementById("add-tab").onclick = showAdd;
     document.getElementById("add-animal").onsubmit = addAnimal;
-    showAnimals();
+    // document.getElementById("add-trait").onclick = addTrait;
 };
